@@ -1,2 +1,2 @@
 # holbertonschool-printf
-A simplified recreation version of printf.
+A simplified recreation of printf.
