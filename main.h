@@ -2,10 +2,12 @@
 #define _MAIN_H_
 
 /**
+* struct test - structure called test bc its a test
 * 
-*
-*
+* 
 */
+
+struct test
 
 int _printf(const char *format, ...);
 int _putchar(char);
