@@ -10,7 +10,7 @@ int _printf(const char *format, ...);
 	
 	va_list, varg
 	fmtType array[] = {
-		{'d', i_printf},
+		{'d', d_printf},
 		{'i', i_printf},
 		{'c', c_printf},
 		{'s', s_printf},
