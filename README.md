@@ -36,9 +36,10 @@ This is an example of the usage of the `_printf` function:
 	    _printf("%s current tempature is %i.\n", string, num);
 	    return (0);
 
+## Manual
 
-
-		
+To open the _printf manual run this command in the terminal.
+'man ./_printf.1'
 	
 ## Link to flowchart via Jamboard
 
