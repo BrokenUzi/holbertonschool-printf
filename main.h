@@ -7,7 +7,12 @@
 * 
 */
 
-struct test
+typedef stuct arg
+{
+	char type;
+	int(*f)(va_list);
+}
+	fmt type;
 
 int _printf(const char *format, ...);
 int _putchar(char);
