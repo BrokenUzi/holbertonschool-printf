@@ -9,9 +9,9 @@
 
 int _printf(const char *format, ...)
 {
-	int i = 0, count = 0, j;
+	int i = 0, count = 0, j; // Initialize counters and temporary variable j
 	va_list varg;
-	fmtType format_array[] = {
+	fmtType format_array[] = { // Define the structure array for handling different format specifiers
 			{'d', d_printf},
 			{'i', i_printf},
 			{'c', c_printf},
