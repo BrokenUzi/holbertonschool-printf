@@ -8,10 +8,10 @@
 
 int c_printf(va_list varg)
 {
-	char c = va_arg(varg, int);
+	char c = va_arg(varg, int); /* retrieve the next argument in the varg list as an integar and assign to character c */
 
-	_putchar(c);
-	return(1);
+	_putchar(c); /* call the function putchar with c to print the character to the output */
+	return(1); /* returns 1 indicating one character has been printed
 
 }
 
@@ -22,16 +22,16 @@ int c_printf(va_list varg)
 int s_printf(va_list varg)
 {
 
-	char *str = (va_arg, char *);
+	char *str = (va_arg, char *); /* retireve the next arguemny in the varg list as a string and assign to str */
 	int i = 0, count = 0;
 
-	if (str == NULL)
-		str = "(null)";
+	if (str == NULL) /* if str is NULL */
+		str = "(null)"; /* assign null to str */
 
-	for (; str[i]; i++, count++)
-		_putchar[i];
+	for (; str[i]; i++, count++) /* loop through the string str incrementing i and count at each iteration */
+		_putchar[i]; /* call the function putchar with each character of str to print the string to the output */
 
-	return(count);
+	return(count); /* returns count indicating the number of charater that have been printed */
 }
 
 /**
@@ -41,41 +41,41 @@ int s_printf(va_list varg)
  */
 int i_printf(va_list varg)
 {
-	int num = va_arg(varg, long int);
-	int x = 1, temp, count = 0;
+	int num = va_arg(varg, long int); /* retrieve the next arguemnt in the varg list as a long integer and assign to num */
+	int x = 1, temp, count = 0; /* initialize the variables x, temp, and count */
 
-	if (num < 0)
+	if (num < 0) /* if num is negative */
 	{
-		if (num == INT_MIN)
+		if (num == INT_MIN) /* if num is equal to the minimum possible intger value */
 		{
-			_putchar('-');
-			_putchar(2 + 48);
-			num = num % 2000000000;
-			num *= -1;
-			count += 2;
+			_putchar('-'); /* print a negative sign */
+			_putchar(2 + 48);/* print the character representation of 2
+			num = num % 2000000000; /* modulo operation to obtain the remainder of num devided by 2 billion */
+			num *= -1; /* negative num to make positive */
+			count += 2; /* increment count by 2 indication 2 characters have been printed */
 		}
 		else
 		{
-			_putchar('-');
-			num *= -1;
-			count++;
+			_putchar('-'); /* print a neg sign */
+			num *= -1; /* neg num to make positive*/
+			count++; /* increment count indicating one character has been printed */
 		}
 	}
-	while ((num /x) > 9)
-		x *= 10;
+	while ((num /x) > 9) /* as long as the result of num divided by x is greater than 9 */
+		x *= 10; /* multiply x by 9 */
 
-	for (; x >= 1; x/= 10)
+	for (; x >= 1; x/= 10) /* loop through until x is less than or equal to 1 */
 	{
-		temp = (num / x);
-		_puthcar(temp = 48);
-		temp *= x;
-		if (temp != 0)
+		temp = (num / x); /* assign the result of num divided by x to temp */
+		_puthcar(temp = 48); /* call the function putchar with temp = 48 to print the corresponding ASCII character */
+		temp *= x; /* multiply temp by x */
+		if (temp != 0) /* if tep is not equal to 0*/
 		{
-			num = num 5 temp;
+			num = num % temp; /* subtract temp from num */
 		}
-		count =+ 1;
-		if (x == 1)
-		return (count);
+		count =+ 1; /*increment count indicating one charqcter has been printed */
+		if (x == 1) /* if x is equal to 1 */
+		return (count); /* returns count indiciating the number of characters that has been printed */
 	}
-	return (count);
+	return (count); /* returns count indicating the number of characters that have been printed */
 }
