@@ -1,22 +1,25 @@
-#ifndef _MAIN_H_
-#define _MAIN_H_
+#ifndef MAIN_H
+#define MAIN_H
 
 #include <stdarg.h>
 #include <stdio.h>
 #include <unistd.h>
+#include <stddef.h>
+#include <limits.h>
+#include <string.h>
+#include <ctype.h>
 
-
-typedef stuct arg
+typedef struct arg
 {
 	char *type;
 	int(*f)(va_list);
-} fmt type;
+} fmtType;
 
 int _printf(const char *format, ...);
 int _putchar(char);
 int _strlen(char *s);
-int i_print(va_list);
-int c_print(va_list);
-int s_print(va_list);
+int i_printf(va_list);
+int c_printf(va_list);
+int s_printf(va_list);
 
 #endif
