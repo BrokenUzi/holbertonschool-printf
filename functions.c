@@ -11,25 +11,26 @@ int c_printf(va_list varg)
 	char c = va_arg(varg, int); /* retrieve the next argument in the varg list as an integar and assign to character c */
 
 	_putchar(c); /* call the function putchar with c to print the character to the output */
-	return (1); /* returns 1 indicating one character has been printed
+	return (1); /* returns 1 indicating one character has been printed */
 
 }
 
 /**
  * s_printf - prints a string to the output
  * @varg: arguments used in function
- * Return: returns a count in function
+ * Return: returns a count in function */
+
 int s_printf(va_list varg)
 {
 
-	char *str = (va_arg, char *); /* retireve the next arguemny in the varg list as a string and assign to str */
+	char *str = va_arg(varg, char *); /* retireve the next arguemny in the varg list as a string and assign to str */
 	int i = 0, count = 0;
 
 	if (str == NULL) /* if str is NULL */
 		str = "(null)"; /* assign null to str */
 
 	for (; str[i]; i++, count++) /* loop through the string str incrementing i and count at each iteration */
-		_putchar[i]; /* call the function putchar with each character of str to print the string to the output */
+		_putchar(str[i]); /* call the function putchar with each character of str to print the string to the output */
 
 	return (count); /* returns count indicating the number of charater that have been printed */
 }
@@ -49,7 +50,7 @@ int i_printf(va_list varg)
 		if (num == INT_MIN) /* if num is equal to the minimum possible intger value */
 		{
 			_putchar('-'); /* print a negative sign */
-			_putchar(2 + 48);/* print the character representation of 2
+			_putchar(2 + 48);/* print the character representation of 2 */
 			num = num % 2000000000; /* modulo operation to obtain the remainder of num devided by 2 billion */
 			num *= -1; /* negative num to make positive */
 			count += 2; /* increment count by 2 indication 2 characters have been printed */
@@ -67,7 +68,7 @@ int i_printf(va_list varg)
 	for (; x >= 1; x /= 10) /* loop through until x is less than or equal to 1 */
 	{
 		temp = (num / x); /* assign the result of num divided by x to temp */
-		_puthcar(temp = 48); /* call the function putchar with temp = 48 to print the corresponding ASCII character */
+		_putchar(temp = 48); /* call the function putchar with temp = 48 to print the corresponding ASCII character */
 		temp *= x; /* multiply temp by x */
 		if (temp != 0) /* if tep is not equal to 0*/
 		{

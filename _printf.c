@@ -31,14 +31,14 @@ int _printf(const char *format, ...)
 			++i; /* Move to the next character which should be the format specifier */
 			for (j = 0; format_array[j].type; ++j) /* Iterate through the array of format specifier handlers */
 			{
-				if (format[i] == format_array[j].type) /* If the current character matches a type in the array */
+				if (format[i] == *(format_array[j].type)) /* If the current character matches a type in the array */
 				{
 					count += format_array[j].f(varg); /* Call the corresponding handler function and add its return value to the count */
 					break; /* Break the loop since we found a match */
 				}
 			}
-			if (!format_array[j].type) /* If no match was found in the array its an unsupported format specifier
-				count += (format[i]); */
+			if (!format_array[j].type) /* If no match was found in the array its an unsupported format specifier */
+				count += (format[i]);
 		}
 		else
 		{
@@ -49,3 +49,4 @@ int _printf(const char *format, ...)
 	}
 	va_end(varg); /* Clean up variable argument list */
 	return (count); /* Return the total count  of printed characters */
+}
