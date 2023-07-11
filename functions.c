@@ -11,7 +11,7 @@ int c_printf(va_list varg)
 	char c = va_arg(varg, int); /* retrieve the next argument in the varg list as an integar and assign to character c */
 
 	_putchar(c); /* call the function putchar with c to print the character to the output */
-	return(1); /* returns 1 indicating one character has been printed
+	return (1); /* returns 1 indicating one character has been printed
 
 }
 
@@ -31,7 +31,7 @@ int s_printf(va_list varg)
 	for (; str[i]; i++, count++) /* loop through the string str incrementing i and count at each iteration */
 		_putchar[i]; /* call the function putchar with each character of str to print the string to the output */
 
-	return(count); /* returns count indicating the number of charater that have been printed */
+	return (count); /* returns count indicating the number of charater that have been printed */
 }
 
 /**
@@ -61,10 +61,10 @@ int i_printf(va_list varg)
 			count++; /* increment count indicating one character has been printed */
 		}
 	}
-	while ((num /x) > 9) /* as long as the result of num divided by x is greater than 9 */
+	while ((num / x) > 9) /* as long as the result of num divided by x is greater than 9 */
 		x *= 10; /* multiply x by 9 */
 
-	for (; x >= 1; x/= 10) /* loop through until x is less than or equal to 1 */
+	for (; x >= 1; x /= 10) /* loop through until x is less than or equal to 1 */
 	{
 		temp = (num / x); /* assign the result of num divided by x to temp */
 		_puthcar(temp = 48); /* call the function putchar with temp = 48 to print the corresponding ASCII character */
