@@ -3,8 +3,8 @@
 
 /**
  * _printf - This function prints characters and input variables
- *
- * Return - the number of characters printed or negative value if error occurs
+ * @format: input information into printf, starts and ends with ""
+ * Return: the number of characters printed or negative value if error occurs
  */
 
 int _printf(const char *format, ...)

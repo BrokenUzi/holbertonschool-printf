@@ -61,7 +61,7 @@ int e_printf(char e)
 
 /**
  * i_printf - prints a string to the output
- * @varg - arguments used in function
+ * @varg: arguments used in function
  * Return: Returns a count to the main function
  */
 int i_printf(va_list varg)
