@@ -2,11 +2,10 @@
 #include <stdarg.h>
 
 /**
- * _printf - This function prints characters and input variables 
- * 
- * Return - the number of characters printed, or a negative value if any error occurs
+ * _printf - This function prints characters and input variables
+ *
+ * Return - the number of characters printed or negative value if error occurs
  */
-<<<<<<< HEAD
 
 int _printf(const char *format, ...)
 {
@@ -23,13 +22,13 @@ int _printf(const char *format, ...)
 	va_start(varg, format);
 	if (!format)
 		return (-1);
-	while (format && format[i]) 
-	{
+	while (format && format[i])
+{
 		if (format[i] == '%')
 		{
 			if (!format[i + 1])
 				return (-1);
-			++i; 
+			++i;
 			for (j = 0; format_array[j].type; ++j)
 			{
 				if (format[i] == format_array[j].type)
@@ -43,10 +42,10 @@ int _printf(const char *format, ...)
 		}
 		else
 		{
-			_putchar(format[i]); 
-			++count; 
-		}
+			_putchar(format[i]);
+			++count;
+	}
 		++i;
 	}
 	va_end(varg);
-	return count;
+	return (count);
