@@ -1,10 +1,12 @@
 #include "main.h"
+#include <stdarg.h>
 
 /**
  * _printf - This function prints characters and input variables 
  * 
  * Return - the number of characters printed, or a negative value if any error occurs
  */
+<<<<<<< HEAD
 
 int _printf(const char *format, ...)
 {
@@ -48,3 +50,29 @@ int _printf(const char *format, ...)
 	}
 	va_end(varg);
 	return count;
+=======
+int _printf(const char *format, ...);
+{
+	
+	va_list, varg
+	fmtType array[] = {
+		{'d', d_printf},
+		{'i', i_printf},
+		{'c', c_printf},
+		{'s', s_printf},
+		{'\0', NULL}
+};
+int len = _strlen;
+
+	if (format == NULL)
+		return (-1);
+
+for (int i = 0; i < _strlen(format); i++)
+{
+	if (format[i] == 'd')
+	_putchar
+}
+	int val = va_arg(varg int);
+	d_printf(val);
+
+>>>>>>> 5399d9e6cc8168b41ac062a1eb26498aa7c0d033
