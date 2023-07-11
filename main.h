@@ -21,5 +21,6 @@ int _strlen(char *s);
 int i_printf(va_list);
 int c_printf(va_list);
 int s_printf(va_list);
+int e_printf(char e);
 
 #endif

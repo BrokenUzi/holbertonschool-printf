@@ -36,6 +36,29 @@ int s_printf(va_list varg)
 }
 
 /**
+ * e_printf - Prints special characters such as '%' and '!'
+ * @e: Character after the %
+ * Return: Returns number based on input
+ */
+int e_printf(char e)
+{
+	if (e == '\0') /*If single %*/
+		return (-1);
+	else if (e == '%') /*If %%*/
+	{
+		_putchar('%');
+		return (1);
+	}
+	else
+	{
+		_putchar('%'); /*If % then print*/
+		_putchar(e);
+		return (2);
+	}
+		return (0);
+}
+
+/**
  * i_printf - prints a string to the output
  * @varg - arguments used in function
  * Return: Returns a count to the main function

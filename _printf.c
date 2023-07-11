@@ -38,7 +38,7 @@ int _printf(const char *format, ...)
 				}
 			}
 			if (!format_array[j].type) /* If no match was found in the array its an unsupported format specifier */
-				count += (format[i]);
+				count += e_printf(format[i]);
 		}
 		else
 		{
