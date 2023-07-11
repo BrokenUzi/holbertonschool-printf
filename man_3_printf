@@ -1,2 +1,23 @@
-#include <stdio.h>
-
+.TH _PRINTF 1 printf\-0.1
+.SH NAME
+_printf \- a simplified clone of print format.
+.SH SYNOPSIS
+.B _printf has no flags available.
+.SH DESCRIPTION
+.B _printf is a simplified version of printf. It is used for formatted output. _printf formats and prints the data according to the format string, producing output on the console or other output streams. Included format specifiers are %d, %i, %c, and %s. More information can be found below.
+.SH OPTIONS
+.B _printf
+.TP 
+.B %d
+prints a decimal\n
+.TP
+.B %i 
+prints an integer(int)\n
+.TP
+.B %c
+prints a single character(char)\n
+.TP
+.B %s
+prints a string by incrementing one by character at a time until it hits NULL.\n
+.SH AUTHORS
+.B Jake Velasquez, Abrielle Perry
