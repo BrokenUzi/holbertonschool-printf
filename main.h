@@ -12,7 +12,7 @@
 typedef struct arg
 {
 	char *type;
-	int(*f)(va_list);
+	int (*f)(va_list);
 } fmtType;
 
 int _printf(const char *format, ...);

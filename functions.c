@@ -8,9 +8,9 @@
 
 int c_printf(va_list varg)
 {
-	char c = va_arg(varg, int); /* retrieve the next argument in the varg list as an integar and assign to character c */
+	char c = va_arg(varg, int); /*get next arg in varg list as int & assign to c*/
 
-	_putchar(c); /* call the function putchar with c to print the character to the output */
+	_putchar(c); /* call func putchar with c to print char to the output*/
 	return (1); /* returns 1 indicating one character has been printed */
 
 }
@@ -18,21 +18,22 @@ int c_printf(va_list varg)
 /**
  * s_printf - prints a string to the output
  * @varg: arguments used in function
- * Return: returns a count in function */
+ * Return: returns a count in function
+ */
 
 int s_printf(va_list varg)
 {
 
-	char *str = va_arg(varg, char *); /* retireve the next arguemny in the varg list as a string and assign to str */
+	char *str = va_arg(varg, char *); /*get next arg in varglist as sting to str*/
 	int i = 0, count = 0;
 
 	if (str == NULL) /* if str is NULL */
 		str = "(null)"; /* assign null to str */
 
-	for (; str[i]; i++, count++) /* loop through the string str incrementing i and count at each iteration */
-		_putchar(str[i]); /* call the function putchar with each character of str to print the string to the output */
+	for (; str[i]; i++, count++) /*loopthru str,incrementing i,count iteration*/
+		_putchar(str[i]); /*call func putchar w each char of str to print str to op*/
 
-	return (count); /* returns count indicating the number of charater that have been printed */
+	return (count); /*returns count indicating num chars tht have been printed*/
 }
 
 /**
@@ -65,18 +66,18 @@ int e_printf(char e)
  */
 int i_printf(va_list varg)
 {
-	int num = va_arg(varg, long int); /* retrieve the next arguemnt in the varg list as a long integer and assign to num */
+	int num = va_arg(varg, long int); /*get next arg varglist as longint to num*/
 	int x = 1, temp, count = 0; /* initialize the variables x, temp, and count */
 
 	if (num < 0) /* if num is negative */
 	{
-		if (num == INT_MIN) /* if num is equal to the minimum possible intger value */
+		if (num == INT_MIN) /* if num is equal to the minimum possible intvalue*/
 		{
 			_putchar('-'); /* print a negative sign */
 			_putchar(2 + 48);/* print the character representation of 2 */
-			num = num % 2000000000; /* modulo operation to obtain the remainder of num devided by 2 billion */
+			num = num % 2000000000; /* modulo op obtain remandr of num div by 2billion*/
 			num *= -1; /* negative num to make positive */
-			count += 2; /* increment count by 2 indication 2 characters have been printed */
+			count += 2; /*increment count by 2 indication 2 chars have printed*/
 		}
 		else
 		{
@@ -85,21 +86,21 @@ int i_printf(va_list varg)
 			count++; /* increment count indicating one character has been printed */
 		}
 	}
-	while ((num / x) > 9) /* as long as the result of num divided by x is greater than 9 */
+	while ((num / x) > 9) /*as long as result of num div by x is greater than 9 */
 		x *= 10; /* multiply x by 9 */
 
 	for (; x >= 1; x /= 10) /* loop through until x is less than or equal to 1 */
 	{
 		temp = (num / x); /* assign the result of num divided by x to temp */
-		_putchar(temp = 48); /* call the function putchar with temp = 48 to print the corresponding ASCII character */
+		_putchar(temp = 48); /*call func putchar w temp=48 to print the char*/
 		temp *= x; /* multiply temp by x */
 		if (temp != 0) /* if tep is not equal to 0*/
 		{
 			num = num % temp; /* subtract temp from num */
 		}
-		count =+ 1; /*increment count indicating one charqcter has been printed */
+		count = +1; /*increment count indicating one charqcter has been printed */
 		if (x == 1) /* if x is equal to 1 */
-		return (count); /* returns count indiciating the number of characters that has been printed */
+		return (count); /*returns count indiciating num chars that has printed*/
 	}
-	return (count); /* returns count indicating the number of characters that have been printed */
+	return (count); /*return count indicating num of chars that have printed*/
 }
