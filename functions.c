@@ -98,7 +98,7 @@ int i_printf(va_list varg)
 		{
 			num = num % temp; /* subtract temp from num */
 		}
-		count = +1; /*increment count indicating one charqcter has been printed */
+		count += 1; /*increment count indicating one charqcter has been printed */
 		if (x == 1) /* if x is equal to 1 */
 		return (count); /*returns count indiciating num chars that has printed*/
 	}
