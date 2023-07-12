@@ -36,9 +36,9 @@ This is an example of the usage of the `_printf` function:
 	    _printf("%s current tempature is %i.\n", string, num);
 	    return (0);
 
-## Link to flowchart via Jamboard
+## Link to Flowchart via Google Slides
 
-https://jamboard.google.com/d/1ZkgAn6Cay38LpqAJrVNTTbv8Q0xYJCwv75TjkWquwfk/edit?usp=sharing
+https://docs.google.com/presentation/d/1qOMmEtj5uHuB0THS5q7_AN3OYVMsIjzHthl4KhqF3lg/edit?usp=sharing
 
 ## Manual
 
