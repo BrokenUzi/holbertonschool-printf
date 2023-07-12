@@ -19,5 +19,7 @@ prints a single character(char)\n
 .TP
 .B %s
 prints a string by incrementing one by character at a time until it hits NULL.\n
+.SH FLOWCHART
+.B https://jamboard.google.com/d/1ZkgAn6Cay38LpqAJrVNTTbv8Q0xYJCwv75TjkWquwfk/edit?usp=sharing
 .SH AUTHORS
 .B Jake Velasquez, Abrielle Perry

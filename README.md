@@ -38,6 +38,8 @@ This is an example of the usage of the `_printf` function:
 
 ## Link to flowchart via Jamboard
 
+https://jamboard.google.com/d/1ZkgAn6Cay38LpqAJrVNTTbv8Q0xYJCwv75TjkWquwfk/edit?usp=sharing
+
 ## Manual
 
 To open the _printf manual run this command in the terminal:
