@@ -92,7 +92,7 @@ int i_printf(va_list varg)
 	for (; x >= 1; x /= 10) /* loop through until x is less than or equal to 1 */
 	{
 		temp = (num / x); /* assign the result of num divided by x to temp */
-		_putchar(temp = 48); /*call func putchar w temp=48 to print the char*/
+		_putchar(temp + 48); /*call func putchar w temp=48 to print the char*/
 		temp *= x; /* multiply temp by x */
 		if (temp != 0) /* if tep is not equal to 0*/
 		{
