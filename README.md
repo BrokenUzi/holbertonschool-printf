@@ -36,6 +36,8 @@ This is an example of the usage of the `_printf` function:
 	    _printf("%s current tempature is %i.\n", string, num);
 	    return (0);
 
+output: Tulsa's current tempature is 88.
+
 ## Link to Flowchart via Google Slides
 
 https://docs.google.com/presentation/d/1qOMmEtj5uHuB0THS5q7_AN3OYVMsIjzHthl4KhqF3lg/edit?usp=sharing
